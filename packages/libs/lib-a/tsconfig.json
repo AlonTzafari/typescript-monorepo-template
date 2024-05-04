@@ -13,5 +13,6 @@
     "strict": true,                                      /* Enable all strict type-checking options. */
     "noUncheckedIndexedAccess": true,       /* Enforces using indexed accessors for keys declared using an indexed type. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+  },
+  "include": ["src"]
 }

@@ -6,8 +6,11 @@
     "lib-a": "*"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "esbuild": "^0.20.2",
+    "jest": "^29.7.0",
     "nodemon": "^3.1.0",
+    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
@@ -15,7 +18,7 @@
     "start": "node --enable-source-maps dist/index.js",
     "dev": "nodemon src/index.ts",
     "build": "esbuild src/index.ts --bundle --minify --sourcemap --outdir=dist --target=node20 --platform=node",
-    "test": "tsc --noEmit",
+    "test": "tsc --noEmit && jest",
     "lint": "eslint .",
     "docker-build": "docker build ../../../ -t service-a:latest -f ./dockerfile"
   },
