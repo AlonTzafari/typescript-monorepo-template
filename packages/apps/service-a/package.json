@@ -1,0 +1,23 @@
+{
+  "name": "service-a",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "dependencies": {
+    "lib-a": "*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "start": "node --enable-source-maps dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "esbuild src/index.ts --bundle --minify --sourcemap --outdir=dist --target=node20 --platform=node",
+    "test": "tsc --noEmit"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}

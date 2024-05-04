@@ -1,0 +1,22 @@
+{
+  "name": "typescript-monorepo-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "check-versions": "check-dependency-version-consistency .",
+    "test-all": "nx run-many -t test --output-style stream",
+    "build-all": "nx run-many -t build --output-style stream"
+  },
+  "keywords": [],
+  "author": "Alon Tzafari",
+  "license": "MIT",
+  "description": "A template for monorepos including nx, typescript, vite, eslint & docker",
+  "devDependencies": {
+    "check-dependency-version-consistency": "^4.1.0",
+    "nx": "18.3.4"
+  },
+  "workspaces": [
+    "packages/apps/*",
+    "packages/libs/*"
+  ]
+}

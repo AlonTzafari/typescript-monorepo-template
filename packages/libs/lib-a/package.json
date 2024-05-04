@@ -1,0 +1,16 @@
+{
+  "name": "lib-a",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc --noEmit"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}
