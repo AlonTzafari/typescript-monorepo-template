@@ -1,0 +1,18 @@
+FROM node:20-alpine as meta
+WORKDIR /app
+COPY . .
+RUN /bin/sh ./meta.sh
+RUN npm --prefix ./.meta/packages/apps/service-a version 0.0.0
+
+FROM node:20-alpine as build
+WORKDIR /app
+COPY --from=meta /app/.meta/ ./
+RUN npm ci
+COPY . .
+RUN npx nx run service-a:build
+
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=build /app/packages/apps/service-a/dist/ ./
+CMD ["node", "--enable-source-maps", "index.js"]
+

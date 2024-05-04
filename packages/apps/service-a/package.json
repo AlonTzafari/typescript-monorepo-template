@@ -1,6 +1,6 @@
 {
   "name": "service-a",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "dependencies": {
     "lib-a": "*"
@@ -15,7 +15,9 @@
     "start": "node --enable-source-maps dist/index.js",
     "dev": "nodemon src/index.ts",
     "build": "esbuild src/index.ts --bundle --minify --sourcemap --outdir=dist --target=node20 --platform=node",
-    "test": "tsc --noEmit"
+    "test": "tsc --noEmit",
+    "lint": "eslint .",
+    "docker-build": "docker build ../../../ -t service-a:latest -f ./dockerfile"
   },
   "author": "",
   "license": "MIT",
