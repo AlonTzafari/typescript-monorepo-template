@@ -14,8 +14,6 @@ Check my post about this repository [here](https://victorlillo.dev/blog/react-ty
 
 - 📚 **Storybook** for live viewing the components.
 
-- 🎨 **PostCSS** for processing our CSS.
-
 - 🖌️ **CSS Modules** in development, compiled CSS for production builds.
 
 - 🧪 Testing with **Vitest** and **React Testing Library**.
@@ -29,8 +27,6 @@ Check my post about this repository [here](https://victorlillo.dev/blog/react-ty
 |      `build`      | Build the `dist`, with types declarations, after checking types with TypeScript.   |
 |      `lint`       | Lint the project with **Eslint**.                                                  |
 |    `lint:fix`     | Lint and fix the project with **Eslint**.                                          |
-|    `stylelint`    | Lint the styles code with **Stylelint**.                                           |
-|  `stylelint:fix`  | Lint and fix the styles code with **Stylelint**.                                   |
 |    `storybook`    | Start a Storybook development server.                                              |
 | `build-storybook` | Build the Storybook `dist`.                                                        |
 |      `test`       | Run the tests with **Vitest** using `jsdom` and starts a **Vitest UI** dev server. |
