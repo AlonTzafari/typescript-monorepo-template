@@ -1,0 +1,7 @@
+// msg.proto
+package mynamespace;
+syntax = "proto3";
+
+message Msg {
+    string field = 1; // becomes awesomeField
+}
